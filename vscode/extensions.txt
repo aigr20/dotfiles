@@ -1,0 +1,8 @@
+colorize
+ejs language support
+eslint
+gitlens
+laravel-blade
+php intelephense
+pylance
+rose pine
