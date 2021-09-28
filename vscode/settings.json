@@ -36,7 +36,7 @@
         "--max-line-length=100"
     ],
     "terminal.explorerKind": "external",
-    "workbench.colorTheme": "Rosé Pine Dawn",
+    "workbench.colorTheme": "Monokai",
     "js/ts.implicitProjectConfig.checkJs": true,
     "python.testing.unittestArgs": [
         "-v",
@@ -106,5 +106,9 @@
     "python.formatting.provider": "yapf",
     "python.formatting.yapfArgs": [
         "--style=/home/wilhelm/.config/style.yapf"
-    ]
+    ],
+    "files.insertFinalNewline": true,
+    "tailwindCSS.includeLanguages": {
+        ".ejs": "html"
+    }
 }
