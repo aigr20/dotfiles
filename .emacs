@@ -29,7 +29,7 @@
 (straight-use-package
  '(rose-pine-emacs
    :host github
-   :repo "thongpv87/rose-pine-emacs"
+   :repo "Caelie/rose-pine-emacs"
    :branch "master"))
 (load-theme 'rose-pine-dawn t)
 
@@ -38,6 +38,7 @@
 (column-number-mode t)
 (size-indication-mode t)
 (menu-bar-mode -1)
+(toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (blink-cursor-mode -1)
 
