@@ -1,6 +1,6 @@
 [MESSAGES CONTROL]
 
-disable=locally-disabled,locally-enabled,too-many-instance-attributes,too-few-public-methods,too-many-arguments,raise-missing-from
+disable=locally-disabled,locally-enabled,too-many-instance-attributes,too-few-public-methods,too-many-arguments,raise-missing-from,missing-module-docstring,missing-function-docstring
 
 
 [FORMAT]
