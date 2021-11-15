@@ -24,15 +24,15 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-(use-package autothemer :ensure t)
+;(use-package autothemer :ensure t)
 
-(straight-use-package
- '(rose-pine-emacs
-   :host github
-   :repo "thongpv87/rose-pine-emacs"
-   :branch "master"))
-(load-theme 'rose-pine-dawn t)
-
+;(straight-use-package
+; '(rose-pine-emacs
+;   :host github
+;   :repo "thongpv87/rose-pine-emacs"
+;   :branch "master"))
+;(load-theme 'rose-pine-dawn t)
+(load-theme 'monokai t)
 (line-number-mode +1)
 (global-display-line-numbers-mode 1)
 (column-number-mode t)

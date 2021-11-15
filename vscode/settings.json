@@ -1,7 +1,7 @@
 {
     "workbench.startupEditor": "none",
     "editor.fontFamily": "'JetBrains Mono',  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "window.menuBarVisibility": "compact",
     "window.restoreWindows": "none",
     "python.pythonPath": "/usr/bin/python3",
@@ -15,17 +15,16 @@
     ],
     "python.autoComplete.addBrackets": true,
     "python.analysis.completeFunctionParens": true,
-    "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "eslint.options": {
-        "parserOptions": {
-            "ecmaVersion": 2018
-        },
-        "configFile": "/home/wilhelm/.config/.eslintrc.json",
-        "resolvePluginsRelativeTo": "/usr/local/lib"
-    },
+    // "eslint.options": {
+    //     // "parserOptions": {
+    //     //     "ecmaVersion": 2018
+    //     // },
+    // "configFile": "/home/wilhelm/.config/.eslintrc.json",
+    // "resolvePluginsRelativeTo": "${workspaceFolder}"
+    // },
     "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.formatOnSave": true,
     "javascript.format.semicolons": "insert",
@@ -36,7 +35,7 @@
         "--max-line-length=100"
     ],
     "terminal.explorerKind": "external",
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Rosé Pine Dawn",
     "js/ts.implicitProjectConfig.checkJs": true,
     "python.testing.unittestArgs": [
         "-v",
@@ -51,18 +50,15 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "python.defaultInterpreterPath": "/usr/bin/python3",
+    // "python.defaultInterpreterPath": "/usr/bin/python3",
     "eslint.format.enable": true,
     "editor.mouseWheelZoom": true,
     "editor.parameterHints.cycle": true,
     "files.eol": "\n",
-    "workbench.iconTheme": "rose-pine-icons",
     "workbench.editor.closeOnFileDelete": true,
-    "eslint.nodePath": "/usr/local/lib/node_modules/",
+    // "eslint.nodePath": "/usr/local/lib/node_modules/",
     "javascript.validate.enable": false,
     "php.suggest.basic": false,
-    "intelephense.environment.phpVersion": "8.0.10",
-    "intelephense.format.enable": false,
     "gitlens.defaultDateFormat": null,
     "gitlens.defaultTimeFormat": "HH:mm",
     "editor.multiCursorModifier": "ctrlCmd",
@@ -110,5 +106,16 @@
     "files.insertFinalNewline": true,
     "tailwindCSS.includeLanguages": {
         ".ejs": "html"
-    }
+    },
+    "git.confirmSync": false,
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+    "workbench.iconTheme": "rose-pine-icons",
+    "intelephense.environment.phpVersion": "7.4.24",
+    "intelephense.environment.shortOpenTag": false,
+    "intelephense.format.enable": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.linting.mypyEnabled": true
 }
