@@ -1,0 +1,11 @@
+notARepository: "quit"
+gui:
+    showBottomLine: false
+    showListFooter: false
+    showRandomTip: false
+    showIcons: false
+keybinding:
+    universal:
+        nextTab: '<c-d>'
+        prevTab: '<c-a>'
+        scrollDownMain-alt2: ''
