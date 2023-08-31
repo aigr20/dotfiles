@@ -104,6 +104,12 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    opts = {},
+  },
+
   require('autoformat')
 }, {})
 
@@ -115,6 +121,7 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 
 vim.o.mouse = 'a'
+vim.o.cursorline = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.breakindent = true
 vim.o.undofile = true
@@ -128,9 +135,10 @@ vim.o.timeoutlen = 300
 
 vim.o.scrolloff = 20
 
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,noinsert'
 
 vim.o.list = true
+vim.cmd([[ highlight IndentBlanklineContextChar guifg=#f2e9e1 gui=nocombine ]])
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -230,10 +238,10 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>ep', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>ee', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>el', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Run on LSP attach to buffer
 local on_attach = function(_, bufnr)
@@ -280,6 +288,18 @@ local servers = {
   gopls = {},
   tsserver = {},
   eslint = {},
+  emmet_ls = {
+    filetypes = {
+      "html",
+      "javascriptreact",
+      "typescriptreact",
+      "php",
+      "xml",
+      "css",
+      "sass",
+      "scss",
+    },
+  },
 }
 
 require('neodev').setup()
@@ -315,8 +335,7 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-d>'] = cmp.mapping.close(),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
